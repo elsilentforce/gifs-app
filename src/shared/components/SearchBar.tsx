@@ -1,9 +1,11 @@
-interface SearchBarProps {
+import type { FC } from "react";
+
+interface Props {
   placeholder: string;
   searchText: string;
 }
 
-export const SearchBar = ({ placeholder, searchText }: SearchBarProps) => {
+export const SearchBar: FC<Props> = ({ placeholder, searchText }) => {
   return (
     <div className="search-container">
       <input type="text" placeholder={placeholder} />
