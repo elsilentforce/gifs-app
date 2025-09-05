@@ -6,14 +6,20 @@ import { CustomHeader } from "./shared/components/CustomHeader";
 import { SearchBar } from "./shared/components/SearchBar";
 
 export const GifsApp = () => {
-  const [previousTerms, setPreviousTerms] = useState(['One Piece']);
+  const [previousTerms, setPreviousTerms] = useState<string[]>([]);
 
   const handleTermClicked = (term: string) => {
     console.log({ term });
   };
 
-  const handleSearch = (query: string) => {
-    console.log({ query });
+  const handleSearch = (query: string = '') => {
+    const sanitizedQuery = query.trim().toLowerCase();
+
+    if (sanitizedQuery.length === 0) return;
+
+    if (previousTerms.includes(sanitizedQuery)) return;
+
+    setPreviousTerms([sanitizedQuery, ...previousTerms.slice(0, 7)]);
   };
 
   return (
