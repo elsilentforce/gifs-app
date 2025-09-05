@@ -28,7 +28,7 @@ export const GifsApp = () => {
   return (
     <>
       {/* Header */}
-      <CustomHeader title="GIFs Search" description="Discover and share the perferct GIF" />
+      <CustomHeader title="GIFs Search" description="Discover and share the perfect GIF" />
 
       {/* Search */}
       <SearchBar
