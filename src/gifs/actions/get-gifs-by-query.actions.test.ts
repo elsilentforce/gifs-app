@@ -60,5 +60,6 @@ describe('getGifsByQuery', () => {
     expect(gifs.length).toBe(0);
     expect(consoleErrorSpy).toHaveBeenCalled();
     expect(consoleErrorSpy).toHaveBeenCalledTimes(1);
+    expect(consoleErrorSpy).toHaveBeenCalledWith(expect.anything());
   });
 });
