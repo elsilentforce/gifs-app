@@ -15,7 +15,7 @@ export const useGifs = () => {
       return;
     };
 
-    handleSearch(term);
+    await handleSearch(term);
   };
 
   const handleSearch = async (query: string = '') => {
