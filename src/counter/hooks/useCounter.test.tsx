@@ -19,7 +19,7 @@ describe('useCounter', () => {
       expect(result.current.counter).toBe(11)
     });
 
-    test('increment counter when handleSubstract is called', () => {
+    test('increment counter when handleSubtract is called', () => {
       const { result } = renderHook(() => useCounter());
 
       act(() => {
