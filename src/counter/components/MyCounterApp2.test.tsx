@@ -10,8 +10,8 @@ vi.mock('../hooks/useCounter', () => ({
   useCounter: () => ({
     counter: 20,
     handleAdd: handleAddMock,
-    handleReset: handleSubstractMock,
-    handleSubstract: handleResetMock
+    handleReset: handleResetMock,
+    handleSubstract: handleSubstractMock
   }),
 }));
 
