@@ -23,7 +23,7 @@ describe('useCounter', () => {
       const { result } = renderHook(() => useCounter());
 
       act(() => {
-        result.current.handleSubtract();
+        result.current.handleSubstract();
       });
 
       expect(result.current.counter).toBe(9)
